@@ -1,0 +1,211 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  /* Perusvärit */
+  --primary: #8664fb;
+  --secondary: #e769c5;
+  --accent: #d2ff66;
+  --danger: #d11d3e;
+  --muted: #8b797d;
+  --background-light: #ebebeb;
+  --background-dark: #212121;
+  --text-dark: #3d6275;
+  --text-light: #ffffff;
+
+  /* Light Mode */
+  --vt-c-white: var(--background-light);
+  --vt-c-white-soft: #f5f5f5;
+  --vt-c-white-mute: #e0e0e0;
+
+  --vt-c-black: var(--text-dark);
+  --vt-c-black-soft: #4a738a;
+  --vt-c-black-mute: #6a8fa3;
+
+  --vt-c-indigo: var(--primary);
+
+  --vt-c-divider-light-1: rgba(61, 98, 117, 0.3);
+  --vt-c-divider-light-2: rgba(61, 98, 117, 0.15);
+
+  --vt-c-text-light-1: var(--text-dark);
+  --vt-c-text-light-2: rgba(61, 98, 117, 0.66);
+
+  /* Dark Mode */
+  --vt-c-black: var(--background-dark);
+  --vt-c-black-soft: #2b2b2b;
+  --vt-c-black-mute: #383838;
+
+  --vt-c-white: var(--text-light);
+  --vt-c-white-soft: #f2f2f2;
+  --vt-c-white-mute: #cccccc;
+
+  --vt-c-divider-dark-1: rgba(139, 121, 125, 0.65);
+  --vt-c-divider-dark-2: rgba(139, 121, 125, 0.48);
+
+  --vt-c-text-dark-1: var(--text-light);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* Semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-1);
+  }
+}
+
+/* Vakiotilavälit */
+:root {
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 164px;
+}
+
+/* Spacing */
+.m-0 {
+  margin: 0;
+}
+.mb-xs {
+  margin-bottom: var(--spacing-xs);
+}
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+.mb-xl {
+  margin-bottom: var(--spacing-xl);
+}
+.mb-xxxl {
+  margin-bottom: var(--spacing-3xl);
+}
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+/* Fontit */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap");
+
+/* Yleiset typografiamääritykset */
+:root {
+  --font-heading: "Space Mono", monospace;
+  --font-body: "Space Grotesk", sans-serif;
+
+  --font-size-base: 18px; /* Nostettu 16px -> 18px */
+  --font-size-sm: 16px; /* Vastaavasti pienempi teksti */
+  --font-size-lg: 20px;
+  --font-size-xl: 26px;
+  --font-size-xxl: 34px;
+
+  --line-height-base: 1.5;
+  --line-height-heading: 1.2;
+}
+
+/* Body-tyylit */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Otsikot */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-heading);
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+h2 {
+  font-size: var(--font-size-xl);
+}
+h3 {
+  font-size: var(--font-size-lg);
+}
+h4 {
+  font-size: var(--font-size-base);
+}
+h5 {
+  font-size: var(--font-size-sm);
+}
+
+/* Linkkityylit */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+a:focus {
+  outline: 2px solid var(--accent);
+}
+a:active {
+  color: var(--danger);
+}
+
+/* Dark mode -linkit */
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--secondary);
+  }
+  a:hover {
+    color: var(--primary);
+  }
+  a:focus {
+    outline: 2px solid var(--primary);
+  }
+  a:active {
+    color: var(--danger);
+  }
+}

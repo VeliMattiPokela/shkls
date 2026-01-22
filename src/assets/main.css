@@ -1,0 +1,22 @@
+@import "./base.css";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+  padding: 1rem; /* Oletuksena padding mobiililaitteille */
+}
+
+@media (min-width: 768px) {
+  /* Tabletit ja sitä suuremmat laitteet */
+  #app {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
