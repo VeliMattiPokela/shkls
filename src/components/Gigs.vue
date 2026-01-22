@@ -38,6 +38,20 @@ export default {
       today: new Date(), // Tänään Date-objektina
       gigs: [
         {
+          date: "21.02.2026",
+          venue: "Rockneck",
+          city: "Jyväskylä",
+          with: "",
+          info: "",
+        },
+        {
+          date: "20.02.2026",
+          venue: "Toppila Klubi",
+          city: "Oulu",
+          with: "Huiputus",
+          info: "",
+        },
+        {
           date: "25.01.2025",
           venue: "Tavastia",
           city: "Helsinki",
